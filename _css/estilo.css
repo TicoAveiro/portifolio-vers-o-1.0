@@ -1,0 +1,179 @@
+@charset "UTF-8";
+/*RESET================================*/
+*, *::before, *::after{margin: 0; padding: 0; box-sizing: border-box; -webkit-box-sizing: border-box;}
+body{font-family: Arial, Helvetica, sans-serif; font-size: inherit;}
+a{color: inherit; text-decoration: none;}
+a:hover{color: tomato;}
+ol ul{list-style: none;}
+input, textarea, iframe, select, button{border: none; font-family: Arial, Helvetica, sans-serif}
+h1, h2, h3{ margin: 0; padding: 0;}
+@font-face {
+    font-family:thechamp;
+    src: url('../_fontes/thechamp-italic-webfont.woff');
+}
+
+/* CABEÇALHO */
+.cabecalho{width: 100%; height: auto; float: left;background: #1A2638; padding: 1%; position: relative;}
+.cabecalho h1{background: url('../_image/img-logo.png');float: left; font-size: 0; height: 50px; width: 200px;}
+.cabecalho .btn-bar{float: right;width: 50px; height: 50px; background:white;}
+
+
+/* MENU */
+.cabecalho .menu{width: 80%; height: 100%;top:0; right: 0; padding: 2% 3%; position: fixed; background: black; color:white;}
+.menu ul{width: 100%; text-align: center; padding-top: 50%; list-style: none;}
+.menu li{padding: 4% 0%;font-size: 2em;}
+.menu ul li a{text-decoration: none;}
+.btn-close{background: none; float: right}
+.btn-close i{color: white;font-size: 50px;}
+
+.anima-menu-enter-active {
+    transition: all .8s ease;
+}
+.anima-menu-leave-active {
+    transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.anima-menu-enter, .anima-menu-leave-to  /* .slide-fade-leave-active below version 2.1.8 */ {
+    transform: translateX(200px);
+    opacity: 0;
+}
+
+
+/* BANNER */
+.banner{width: 100%; float: left;text-align: center; padding: 15% 4%; background-image: url('../_image/img-banner.png'); background-position: center;}
+.banner h1{color: white; font-family: thechamp; font-size: 20px}
+.banner h4{color: white; font-family: thechamp; font-size: 40px}
+
+/* ARTICLE TECNOLOGIAS */
+.tecnologias{width: 100%;float: left; text-align: center; padding: 10% 0%;}
+
+/* ARTICLE APRESETA PORTIFOLIO */
+.apresentacao{text-align: center; font-family: thechamp; padding: 5% 0%;}
+
+/* SECTION PORTIFOLIO */
+.portifolio{width: 100%; float:left; padding: 2% 4%; background: #F9F7F3;}
+.portifolio .site{width: 100%;float: left; margin-bottom: 2%;}
+.site img{width: 100%;}
+
+/* ARTICLE SOBRE */
+.sobre{width:100%; float: left; background: #9CA8B6;}
+.sobre .foto{width: 100%; float: left; padding: 2% 2%;}
+.foto img{width:100%}
+.sobre .descricao{width:100%; float: left; padding: 2% 2%; text-align: right; color: white;}
+
+
+/* CONTATOS */
+.contato{width: 100%; float: left; text-align: center;padding: 1%; background: #274060; color: white;}
+/* FOOTER */
+footer{width: 100%; float: left; padding: 2% 0%; background: #192a3d;text-align: center;color: white;}
+
+/* BREAK POINTS 500px */
+@media (min-width:500px){
+    /* sobre */
+.sobre{width:100%; float: left; background: #9CA8B6; padding: 0% 4%;}
+.sobre .foto{width: 100%; float: left; padding: 0% 1%}
+.foto img{width:100%}
+.sobre .descricao{width:100%; float: left; padding: 0% 1%; text-align: right; color: white;}
+
+/* portifolio */
+.portifolio{width: 100%; float:left; padding: 2% 6%; background: #F9F7F3;}
+.portifolio .site{width: 100%;float: left; margin-bottom: 2%;}
+.site img{width: 100%;}
+
+}
+
+/* BREAK POINTS 600px */
+@media (min-width:600px){
+    /* sobre */
+.foto img{width:100%}
+
+}
+
+/* BREAK POINT 700px */
+@media (min-width:700px){
+    /* sobre */
+    .sobre{width:100%; float: left; background: #9CA8B6; padding: 0% 4%;}
+    .sobre .foto{width: 49%; float: left; padding: 0% 1%}
+    .foto img{width:100%}
+    .sobre .descricao{width:49%; float: left; padding: 0% 1%; text-align: right; color: white;}
+
+/* portifolio */
+.portifolio{width: 100%; float:left; padding: 2% 8%; background: #F9F7F3;}
+.portifolio .site{width: 100%;float: left; margin-bottom: 2%;}
+.site img{width: 100%;}
+
+/* banner */
+.banner{padding: 15% 4%;}
+.banner h1{font-size: 25px}
+.banner h4{font-size: 50px}
+
+/* tecnologias */
+.tecnologias{width: 100%;float: left; text-align: center; padding: 5% 0%;}
+
+/* portifolio */
+.apresentacao{text-align: center; font-family: thechamp; padding: 3% 0%;}
+}
+
+/* BREAK POIT 750px */
+@media (min-width:750px){
+    .cabecalho{width: 100%; height: auto; float: left;background: #1A2638; padding: 0% 4%;}
+    .btn-bar, .btn-close{display: none;}
+    
+    .cabecalho h1{font-size: 0; height: 50px; width: 200px; margin-top: 1%}
+
+    /* MENU */
+    .cabecalho .menu{width: auto;line-height: 30px; background: none; float: right; display: block !important; position: static; color:white;}
+    .menu li{padding:0; float: left;margin: 0;}
+    .menu li a{font-size: 0.7em; padding: 10px;}
+    .menu ul{width: 100%; text-align: center; padding-top: 0;}
+
+    /* sobre */
+    .sobre{width:100%; float: left; background: #9CA8B6; padding: 1% 4%;}
+    .sobre .foto{width: 49%; float: left; padding: 0% 1%}
+    .foto img{width:100%}
+    .sobre .descricao{width:49%; float: left; padding: 0% 1%; text-align: right; color: white;}
+}
+
+/* BREAK POINT 850px */
+@media (min-width:850px){
+.cabecalho{width: 100%; height: auto; float: left;padding: 0% 12%;}
+.menu li a{font-size: 0.5em; padding: 10px;}
+
+/* banner */
+.banner{padding: 12% 4%;}
+
+/* portifolio */
+.portifolio{width: 100%; float:left; padding: 2% 4%; background: #F9F7F3;}
+.portifolio .site{width: 33.3333%;float: left; margin-bottom: 2%; padding: 0.5%;}
+.site img{width: 100%;}
+
+
+/* sobre */
+   
+}
+
+/* BREAK POINT 1000PX */
+@media(min-width:1000px){
+.cabecalho{width: 100%; height: auto; float: left;padding: 0% 18%;}
+.menu li a{font-size: 0.5em; padding: 0px 10px 0px 10px;}
+
+.cabecalho .menu{width: auto;line-height: 30px;}
+
+/* tecnologias */
+.tecnologias{width: 100%;float: left; text-align: center; padding: 3% 0%;}
+
+/* portifolio */
+.apresentacao{text-align: center; font-family: thechamp; padding: 2% 0%;}
+
+/* banner */
+.banner{padding: 9% 4%;}
+
+/* sobre */
+.sobre{width:100%; float: left; background: #9CA8B6; padding: 1% 8%;}
+.sobre .foto{width: 49%; float: left; padding: 0% 1%}
+.foto img{width:400px; height: 400px; float: right;}
+.sobre .descricao{width:49%; float: left; padding: 0% 1%; text-align: right; color: white;}
+
+/* footer */
+footer{padding: 1% 0% 0% 0%;}
+
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Portifolio Thiago Luiz, Front-End">
+    <meta name="keyword" content="Thiago Luiz, Thiago Aveiro, O estagiario, desenvolvedor Front-End">
+    <meta name="author" content="Thiago Luiz">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="_css/estilo.css">
+    <link rel="icon" href="_image/icon-site.png">
+    <script src="_vuejs/vue.js"></script>
+    <title>Thiago Luiz</title>
+
+</head>
+<body>
+<div id="app">    
+
+    <!-- START CABEÇALHO -->
+    <header class="cabecalho" >
+        <a href=""><h1>logo Thiago Luiz</h1></a>
+        <button class="btn-bar" v-on:Click="openCloseMenu()"><i class="fa fa-bars fa-lg"></i></button>
+        <!-- MENU -->
+        <transition name="anima-menu"> <!--Transition Vue js-->
+
+            <nav class="menu" v-show="menuAbrir">
+                <button class="btn-close"><i v-on:Click="openCloseMenu()" class="fa fa-window-close fa-lg"></i></button>
+                <ul>
+                    <li><a href="https://www.facebook.com/thiagoaveiro.alves" @Click="openCloseMenu()"><i class="fa fa-facebook-square fa-lg"></i></a></li>
+                    <li><a href="#sobre" v-on:Click="openCloseMenu()">Sobre</a></li>
+                    <li><a href="#contatos" v-on:Click="openCloseMenu()">Contato</a></li>
+                </ul>
+            </nav>
+
+        </transition>
+
+    </header>
+    
+    <!-- START BANNER -->
+    <div class="banner">
+        <h1>present</h1>
+        <h4>O Estagiario</h4>
+    </div>
+
+    <!-- START ARTCLE -->
+    <article class="tecnologias">
+            <button type="button" class="btn btn-danger btn-sm">HTML</button>
+            <button type="button" class="btn btn-primary btn-sm">CSS3</button>
+            <button type="button" class="btn btn-warning btn-sm">JAVASCRIPT</button>
+            <button type="button" class="btn btn-success btn-sm">VUE.JS</button>
+    </article>
+     <!-- START ARTCLE -->
+     <article class="apresentacao">
+            <h1>Portifólio</h1>
+    </article>
+
+    <!-- START SECTION -->
+    <section class="portifolio">
+        <div class="site">
+            <a href="_portifolio/site-port-02/index.html" target="_blank"><img src="_image/img-portifolio01.PNG" alt=""></a>
+        </div>
+
+        <!-- <div class="site">
+            <a href=""><img src="_image/img-portifolio01.PNG" alt=""></a>
+        </div> -->
+
+        <div class="site">
+            <a href="_portifolio/site-port-01/index.html"  target="_blank"><img src="_image/img-portifolio02.PNG" alt=""></a>
+        </div>
+    </section>
+
+    <!-- START ARTICLE SOBRE -->
+    <article class="sobre" id="sobre"> 
+        <div class="foto">
+            <img src="_image/img-sobre.png" alt="">
+        </div>
+
+        <div class="descricao" >
+            <h3>Sobre Thiago</h3>
+            <p>Olá, Meu Nome é Thiago Luiz e estudo analise e desenvolvimento de sistemas,
+                mas praticamente tudo que sei aprendi estudando por minha conta, o meu nível
+                é iniciante e estou a procura da minha primeira chance de participar de um projeto 
+                real onde eu possa ver e participar nas atividades que realmente são necessário para ser um bom 
+                programador, e ver de perto os pontos onde devo focar e ganhar experiencias solidas, e 
+                assim poder produzir de forma competente e passar as minhas aprendizagens adiante sempre
+                que possível, alguns pontos positivos sobre mim, Tenho facilidade para aprender, e muito
+                ânimo em lidar com praticamente tudo que envolva tecnologia.</p>
+            
+
+        </div>
+    </article>
+
+    <!-- START CONTATOS -->
+    <article class="contato" id="contatos">
+        <h6>(79) 98136-5027</h6>
+        <h6>professorsenhor@gmail.com</h6>
+    </article>
+    
+    <!-- START FOOTER -->
+    <footer>
+        <p>Feito Por Thiago luiz.</p>
+    </footer>
+
+</div>
+
+
+
+
+    <script>
+        let root = new Vue({
+            el:"#app",
+            data:{
+                menuAbrir:false,
+            },
+            methods:{
+                openCloseMenu(){
+                    this.menuAbrir = !this.menuAbrir;
+                }
+            }
+        })
+    </script>
+</body>
+</html>

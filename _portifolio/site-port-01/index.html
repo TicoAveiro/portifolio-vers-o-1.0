@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Site batman Thiago Luiz, Front-End">
+    <meta name="keyword" content="Thiago Luiz, Thiago Aveiro, O estagiario, desenvolvedor Front-End">
+    <meta name="author" content="Thiago Luiz">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="_css/estilo.css">
+    <link rel="icon" href="_imagem/icon-site.png">
+    <script src="vuejs/vue.js"></script>
+    <title>Thiago Luiz</title>
+</head>
+<body>
+    <div id="app">
+    <!-- START CABEÇALHO -->
+    <header class="cabecalho">
+        <button @Click="openClose = !openClose" class="btn-bar"><i class="fa fa-bars fa-lg"></i></button>
+        <h1 class="logo"><a href="">Logo batman</a></h1>
+
+        <transition name="anima-menu">
+        <nav class="menu" v-show="openClose">
+            <button @Click="openClose = !openClose" class="btn-close"><i class="fa fa-close fa-lg"></i></button>
+            <ul>
+                <li><a @Click="openClose = !openClose" href="https://www.facebook.com/thiagoaveiro.alves"><i class="fa fa-facebook-official fa-lg"></i></a></li>
+                <li><a @Click="openClose = !openClose" href="#vantagem">Vantagen</a></li>
+                <li><a @Click="openClose = !openClose" href="#garantia">Garantia</a></li>
+                <li><a @Click="openClose = !openClose" href="#sobre">Sobre</a></li>
+            </ul>
+        </nav>
+
+    </transition>
+
+    </header>
+    <!-- START BANNER -->
+    <div class="banner"></div>
+
+    <!-- ARTICLE 01 -->
+    <article class="contrate">
+        <h2>Motivos para Gostar do Batman.</h2>
+    </article>
+
+    <!-- START SECTION QUALIDADES -->
+    <section class="qualidades">
+        <div class="item">
+            <h1><i class="fa fa-cc-visa fa-lg"></i></h1>
+            <h4>Ele é rico!</h4>
+            <p> Ele pode comprar todo o big mec que você conseguir comer!</p>
+        </div>
+
+        <div class="item">
+            <h1><i class="fa fa-graduation-cap fa-lg"></i></h1>
+            <h4>Ele é inteligente!</h4>
+            <p>Vocês podem sair por aí se gabando por
+                serem inteligentes.</p>
+        </div>
+
+        <div class="item">
+            <h1><i class="fa fa-apple fa-lg"></i></h1>
+            <h4>Ele só comprar coisas da apple!</h4>
+            <p>O Batman só tem dispositivos da Apple, inclusive o batmóvel é da Apple!</p>
+        </div>
+
+        <div class="item">
+            <h1><i class="fa fa-linux fa-lg"></i></h1>
+            <h4>O Batman sabe usar o Linux</h4>
+            <p>Agora você pode hackear aquele joguinho dos seus sonhos!</p>
+        </div>
+    </section>
+
+    <!-- START SECTION CURIOSIDADES  -->
+    <section class="curiosidades" id="garantia">
+        <div class="item1">
+            <h1><i class="fa fa-rocket fa-lg"></i></h1>
+            <h2>agora</h2>
+            <p>27</p>
+        </div>
+
+        <div class="item2">
+            <h1><i class="fa fa-magic fa-lg"></i></h1>
+            <h2>clientes</h2>
+            <p>900</p>
+        </div>
+
+        <div class="item1">
+            <h1><i class="fa fa-globe fa-lg"></i></h1>
+            <h2>paises</h2>
+            <p>49</p>
+        </div>
+
+        <div class="item2">
+            <h1><i class="fa fa-thumbs-up fa-lg"></i></h1>
+            <h2>curtidas</h2>
+            <p>48124</p>
+        </div>
+        
+    </section>
+
+    <!-- START DIVISORIA -->
+        <div class="divisoria"></div>
+            
+       
+    
+
+    <!--START ATICLE 02 -->
+    <article class="artigo02" id="vantagem">
+
+        <div class="artigo">
+            <h1><i class="fa fa-paper-plane fa-lg"></i></h1>
+            <h2>Envie Mensagens</h2>
+            <p>O Batman responde com muito carinho.</p>
+        </div>
+
+        <div class="artigo">
+            <h1><i class="fa fa-calendar fa-lg" aria-hidden="true"></i></h1>
+            <h2>Marque uma Data.</h2>
+            <p>O Batman reserva dias para ver os fãs.</p>
+        </div>
+
+        <div class="artigo">
+            <h1><i class="fa fa-car fa-lg" aria-hidden="true"></i></h1>
+            <h2>Passeios no Batmóvel</h2>
+            <p>O Batman permite que você use as armas do batmóvel.</p>
+        </div>
+
+        <div class="artigo">
+            <h1><i class="fa fa-wifi fa-lg" aria-hidden="true"></i></h1>
+            <h2>Use o wifi do Batmóvel</h2>
+            <p>O batmóvel tem 900 mega de velocidade de internet.</p>
+        </div>
+    </article>
+
+    <!-- START FOOTER -->
+    <footer class="rodape">
+        <div class="descricao" id="sobre">
+            <h2>ABOUT ME</h2>
+            <h4>Isso foi apenas uma brincadeira.</h4>
+            <p>Espero que agora você comece a gostar do Batman, 
+             brincadeiras a parte obrigado por visitar o meu portfólio,
+             é de muito valor para mim ter visitantes, principalmente nessa
+             fase de início de carreira na área de desenvolvimento Font-End.</p><br>
+             <ul>
+                 <li><a href="https://twitter.com/dcbatman"><i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i></a></li>
+                 <li><a href="https://www.instagram.com/batman/"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a></li>
+                 <li><a href="https://www.facebook.com/batman/?eid=ARCFEWSqZ1ZXz4NYyDi3dgCoObzI5AqJ-0DY7DUdFH1xdgPGbd1PskOqtfjUIXiaO07yZ39eYs9rnKmV"><i class="fa fa-facebook-official fa-lg" aria-hidden="true"></i></a></li>
+             </ul><br>
+             <p>Feito por Thiago Luiz.</p>
+        </div>
+        <div class="foto-footer">
+            <!-- <img src="_imagem/img-rodape.png" alt=""> -->
+        </div>
+    </footer>
+
+</div>
+
+
+
+
+    <script>
+        let root = new Vue({
+            el:"#app",
+            data:{
+                openClose: false
+            }
+        })
+    </script>
+</body>
+</html>
